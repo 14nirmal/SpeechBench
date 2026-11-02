@@ -267,18 +267,6 @@ pytest -v tests
 ```
 *Result: 16 passed in ~2.8s (unit) / 25s (with PyTorch cold-start).*
 
----
-
-## 💬 Callease AI Technical Discussion (Interview Talking Points)
-
-### Q: Why build SpeechBench rather than relying on OpenAI's published Whisper metrics?
-> *"Published metrics report WER on clean benchmarks like LibriSpeech. In production deployments like Callease AI, real-world audio suffers from acoustic reverberation, microphone clipping, background noise, and dialect variation. SpeechBench provides an automated evaluation harness to stress-test models under controlled SNR degradation (20 dB down to 5 dB) and measure tail latency ($p_{95}/p_{99}$) before deploying models to production."*
-
-### Q: Why is Word Error Rate (WER) insufficient for mission-critical speech?
-> *"WER treats every substitution equally. In security dispatch or call centers, misrecognizing 'The' as 'A' has an error penalty of 1, but misrecognizing 'Gate 4' as 'Gate 2' also has an error penalty of 1. Operationally, the second error is catastrophic. SpeechBench implements Entity Error Rate (EER) to isolate domain-critical keywords and verify that callsigns, incident codes, and location identifiers are reliably extracted."*
-
-### Q: How did you ensure accurate GPU latency and RTF measurements?
-> *"PyTorch launches CUDA operations asynchronously on the GPU stream. Timing Python execution without synchronization measures CPU dispatch time rather than actual GPU computation. In SpeechBench, we execute warm-up passes to eliminate compilation overhead, and wrap model execution with `torch.cuda.synchronize()` before and after inference to measure true wall-clock execution time."*
 
 ---
 
