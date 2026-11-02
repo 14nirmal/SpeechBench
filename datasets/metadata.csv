@@ -1,0 +1,14 @@
+sample_id,audio_path,reference,language,accent,condition,domain_category
+clean_001,datasets/audio/clean/clean_001.wav,the security officer is at the main entrance,en,US_standard,clean,clean
+clean_002,datasets/audio/clean/clean_002.wav,all visitors must register their identification at the reception desk,en,US_standard,clean,clean
+clean_003,datasets/audio/clean/clean_003.wav,the automated access control system verified the credentials successfully,en,US_standard,clean,clean
+clean_004,datasets/audio/clean/clean_004.wav,the perimeter sensor detected unusual movement along the north perimeter fence,en,US_standard,clean,clean
+clean_005,datasets/audio/clean/clean_005.wav,dispatch confirmation received for regular night patrol check,en,US_standard,clean,clean
+sec_001,datasets/audio/domain_security/sec_001.wav,the alarm was triggered at gate 4 near zone b,en,dispatch_male,clean,security_control_room
+sec_002,datasets/audio/domain_security/sec_002.wav,code red reported at building 3 level 2 immediate backup requested,en,dispatch_female,clean,security_control_room
+sec_003,datasets/audio/domain_security/sec_003.wav,patrol unit 12 please respond to loading dock camera 5,en,dispatch_male,clean,security_control_room
+sec_004,datasets/audio/domain_security/sec_004.wav,unauthorized vehicle spotted outside sector 7 near westfield avenue,en,dispatch_female,clean,security_control_room
+sec_005,datasets/audio/domain_security/sec_005.wav,officer davis confirmed clear status at north checkpoint gate 2,en,dispatch_male,clean,security_control_room
+sec_006,datasets/audio/domain_security/sec_006.wav,fire alarm notification from server room bay 4 at 10:15 pm,en,dispatch_female,clean,security_control_room
+sec_007,datasets/audio/domain_security/sec_007.wav,maintenance team required at south tower elevator 3 immediately,en,dispatch_male,clean,security_control_room
+sec_008,datasets/audio/domain_security/sec_008.wav,incident reported at 742 evergreen terrace security dispatched,en,dispatch_female,clean,security_control_room
